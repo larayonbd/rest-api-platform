@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqldb": {
+    "host": "172.16.81.41",
+    "username": "root",
+    "password": "root",
+    "name": "mysqldb",
+    "connector": "mysql"
+  }
+}

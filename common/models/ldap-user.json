@@ -1,0 +1,14 @@
+{
+  "name": "ldap-user",
+  "plural": "ldap-users",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
