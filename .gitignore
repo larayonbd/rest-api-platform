@@ -1,8 +1,7 @@
 *.json
-server/
-client/
-common/
-*
+server/*
+client/*
+common/*
 
 !docker-compose.yml
 !vault.hcl
