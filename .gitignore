@@ -1,5 +1,8 @@
 *.json
-*/
+server/
+client/
+common/
+*
 
 !.gitignore
 !docker-compose.yml
