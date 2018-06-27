@@ -1,0 +1,26 @@
+# docker_compose.yml
+version: '2'
+services:
+    consul:
+      image: "consul:0.7.0"
+      hostname: "consul"
+      command: "agent -dev 0.0.0.0"
+      ports:
+        - "8500:8500"
+        - "8400:8400"
+        - "8600:53/udp"
+    myvault:
+      depends_on:
+        - consul
+      image: "vault:0.6.2"
+      container_name: "myvault"
+      hostname: "vault"
+      links:
+        - "consul:consul"
+      environment:
+        VAULT_ADDR: http://127.0.0.1:8200
+      ports:
+        - "8200:8200"
+      volumes_from:
+        - container:config:rw
+      command: server -config=/config/vault.hcl
