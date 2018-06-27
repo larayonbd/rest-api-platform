@@ -2,7 +2,10 @@
 /server/
 /client/
 /common/
-
+editorconfig
+.eslintignore
+.eslintrc
+.gitignore
 
 !docker-compose.yml
 !vault.hcl
