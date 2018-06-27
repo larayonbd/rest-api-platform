@@ -1,25 +1,6 @@
-*.csv
-*.dat
-*.iml
-*.log
-*.out
-*.pid
-*.seed
-*.sublime-*
-*.swo
-*.swp
-*.tgz
-*.xml
-*.json
-.DS_Store
-.idea
-.project
-.strong-pm
-coverage
-node_modules
-npm-debug.log
-*/
+*
 
+!.gitignore
 !docker-compose.yml
 !vault.hcl
 !README.md
