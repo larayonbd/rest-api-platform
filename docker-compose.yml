@@ -4,16 +4,16 @@ services:
     consul:
       image: "consul:0.7.0"
       hostname: "consul"
-      command: "agent -dev 0.0.0.0"
+      command: "agent -dev -client 0.0.0.0"
       ports:
         - "8500:8500"
         - "8400:8400"
         - "8600:53/udp"
-    myvault:
+    vault:
       depends_on:
         - consul
       image: "vault:0.6.2"
-      container_name: "myvault"
+      container_name: "vault"
       hostname: "vault"
       links:
         - "consul:consul"
@@ -21,6 +21,6 @@ services:
         VAULT_ADDR: http://127.0.0.1:8200
       ports:
         - "8200:8200"
-      volumes_from:
-        - container:config:rw
+      volumes:
+        - ./config/vault:/config
       command: server -config=/config/vault.hcl
