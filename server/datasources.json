@@ -5,6 +5,7 @@
   },
   "mysqldb": {
     "host": "172.16.81.41",
+    "database":"rest-api",
     "username": "root",
     "password": "root",
     "name": "mysqldb",

@@ -27,3 +27,11 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+app.dataSources.mysqldb.autoupdate(['Role','RoleMapping','AccessToken','ACL','User','services','ldap-user','vault-service'], function(err) {
+  if (err) {
+ console.log(err);
+} else {
+ console.log('Success!');
+}
+});

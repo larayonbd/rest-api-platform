@@ -14,29 +14,29 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysqldb"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mysqldb",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mysqldb",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mysqldb",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mysqldb",
     "public": false
   },
   "ldap-user": {
-    "dataSource": "db",
+    "dataSource": "mysqldb",
     "public": true
   },
   "vault-service": {
