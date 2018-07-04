@@ -4,10 +4,10 @@
     "connector": "memory"
   },
   "mysqldb": {
-    "host": "172.16.81.41",
-    "database":"rest-api",
-    "username": "root",
-    "password": "root",
+    "host": "localhost",
+    "database":"rest_api",
+    "username": "admin",
+    "password": "admin",
     "name": "mysqldb",
     "connector": "mysql"
   }
