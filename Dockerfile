@@ -1,7 +1,6 @@
 FROM node:8.0
 ENV DEBIAN_FRONTEND noninteractive
-RUN mkdir -p /usr/src/app
-RUN chown node:node /usr/src/app
+RUN mkdir -p /usr/src/app && chown node:node /usr/src/app
 WORKDIR /usr/src/app
 ARG registry
 
