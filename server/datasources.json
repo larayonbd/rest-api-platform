@@ -5,9 +5,9 @@
   },
   "mysqldb": {
     "host": "localhost",
-    "database":"rest_api",
-    "username": "admin",
-    "password": "admin",
+    "database":"rest-api",
+    "username": "root",
+    "password": "root",
     "name": "mysqldb",
     "connector": "mysql"
   }

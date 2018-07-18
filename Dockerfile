@@ -1,7 +1,6 @@
 FROM node:8.0
 ENV DEBIAN_FRONTEND noninteractive
 RUN mkdir -p /usr/src/app
-RUN chown node:node /usr/src/app
 WORKDIR /usr/src/app
 ARG registry
 
@@ -13,7 +12,6 @@ RUN apt-get update \
   &&  mysql -uroot -e "GRANT ALL PRIVILEGES ON * . * TO 'admin'@'%'" \
   &&  mysql -uroot -e "CREATE DATABASE rest_api CHARACTER SET utf8 COLLATE utf8_general_ci" \
   && npm install loopback-cli
-USER node
 COPY . /usr/src/app
 EXPOSE 3000
 USER root
